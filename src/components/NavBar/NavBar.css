@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Flex:opsz@8..144&display=swap');
+
+
+.barra {
+    display: grid;
+    background-color: black;
+    width: 100%;}
+
+    .barra .titulos{
+                display: grid;
+                text-align: center;     
+    }
+
+   .titulo-menu {
+
+       padding: 20px 0 0 0;
+       font-family: 'Playfair Display', serif;
+       color: #8b863a;
+       display: flex;
+       align-items: flex-end;
+       justify-content: center;
+       font-size: 250%;
+
+
+   }
+
+     .subtitulo-menu {
+        font-family: 'Playfair Display', serif;
+        color: #8b863a;
+        padding: 0 0 25px;
+        font-size: 100%;
+        width: 100%;
+    }
+
+.barramenu-menu {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    column-gap: 10%;}
+ 
+
+.barramenu-menu  a{
+font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 150%;
+    color: #8b863a;
+    
+}
