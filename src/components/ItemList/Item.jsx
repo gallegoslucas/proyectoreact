@@ -1,22 +1,27 @@
 import React from 'react'
 import "./item.css"
 import MyButton from "../MyButton/MyButton";
-import _default from '@popperjs/core/lib/modifiers/popperOffsets';
+import ToggleButton from "../ToggleButton/ToggleButton";
+import { Link } from "react-router-dom";
 
-
-function Item(props) {
+function Item({ description,title, imgurl, price, id, }) {
+    const urlDetail = `/detail/${id}`;
     return (
         <div className="card" >
+            <ToggleButton icon="♥" />
             <div className="card-img">
-                <img src={props.imgurl} alt={props.title} />
+                <img src={imgurl} alt={title} />
             </div>
             <div className="detalles">
                 <div className="tittle-price">
-                <h5 className="card-title">{props.title}</h5>
-                    <p className="card-price">${props.price}</p>
+                <h5 className="card-title">{title}</h5>
+                    <p className="card-price">${price}</p>
                 </div>
-                <p className="card-text">{props.ingredientes}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                <div className="botonlink">
+                <Link className="botonmas" to={urlDetail}>
+                    <MyButton >Ver más</MyButton>
+                </Link>
+            </div>
                 </div>
         </div>
 

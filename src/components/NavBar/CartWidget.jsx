@@ -2,7 +2,7 @@ import React from 'react'
 
 function CartWidget() {
   return (
-    <div>🛒</div>
+    <img className="carro" src="/imgs/carro.png" alt="" />
   )
 }
 

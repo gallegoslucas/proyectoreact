@@ -16,8 +16,8 @@
     color: black;
     margin: 10px 15px;
     width: 300px;
-    background-color: #cec877;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0,0,0,1);
     transition: all 0.20s ease-in;
     display: flex;
    
@@ -56,14 +56,45 @@ padding: 5% 0 0 5%;
     font-size: 150%;
 }     
 
-.card-text{
-    color: #272525;
-    font-size: 110%;
-    line-height: 25px;
-    font-family: 'Roboto Flex',
-    sans-serif;
-    text-align: left;
-    padding: 0 0 0 5%;
 
+
+.card-favicon{
+  
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  right: 0;
+  border-radius:  50%;
+  border: none;
+  margin: 5% 5%;
+  cursor: pointer;
+  background-color: #8b863a;
+  color: black;
+
+
+}
+
+.card-favicon.favorite{
+  
+  background-color: #8b863a;
+  color: red;
+}
+
+
+.botonlink{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+
+.botonmas{
+    
+    width: 30%;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none;
     
 }
