@@ -13,7 +13,7 @@ function ItemDetail({ product }) {
 
     function onAddToCart(count) {
         swal({
-            title: "Felicitaciones!",
+            title: "Muchas gracias!",
             text: `Agregaste ${count} items al carrito!`,
             icon: "success",
             button: "Continuar",

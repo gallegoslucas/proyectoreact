@@ -51,3 +51,27 @@
     font-family: 'Playfair Display',
             serif;
 }
+
+.formulario{
+    margin-bottom: 8%;
+    font-family: 'Playfair Display',
+            serif;
+}
+
+.barra-cart{
+    display: flex;
+    column-gap: 11%;
+    padding-left: 7%;
+    font-family: 'Playfair Display',
+            serif;
+    
+}
+
+.carrovacio{
+    font-family: 'Playfair Display',
+            serif;
+    color: #8b863a;
+    width: 100%;
+    padding:10% 0 10% 0;
+    
+}

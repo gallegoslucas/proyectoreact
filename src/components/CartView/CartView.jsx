@@ -9,7 +9,11 @@ import CartForm from "./CartForm";
 function CartView() {
     const { cart, removeItem, clear, priceInCart } = useContext(cartContext);
     let navigate = useNavigate();
-    if (cart.length === 0) return <h1>Carrito Vacío</h1>;
+    if (cart.length === 0) return <div className="carrovacio">
+        <h1>Carrito Vacío</h1>
+        <a href="/"><MyButton >Volver al menu</MyButton></a>
+    </div>
+    
 
     async function handleCheckout(evt, data) {  
         const order = {
@@ -24,8 +28,16 @@ function CartView() {
     return (
     <div className="cart-contenedor">
 
-        
-        <div className="cart-container">
+            
+            <div className="cart-container">
+                <div className="barra-cart">
+                    <h3>Imagen</h3>
+                    <h3>Producto</h3>
+                    <h3>Precio/u</h3>
+                    <h3>Cantidad</h3>
+                  
+
+                </div>
             <div className="cart-itemsList">
                 {cart.map((item) => (
                     <div key={item.id} className="cart-item">
@@ -43,7 +55,7 @@ function CartView() {
                 <h1 className="totalcart">Total: $
                     {priceInCart()}</h1>
                 <hr />
-                <CartForm onSubmit={handleCheckout } />
+                <CartForm  onSubmit={handleCheckout } />
             
         </div>
     </div>    

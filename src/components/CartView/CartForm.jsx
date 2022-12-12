@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./CartView.css"
 
 export default function CartForm(props) {
   const [data, setData] = useState({
@@ -66,7 +66,7 @@ export default function CartForm(props) {
         />
       </div>
 
-      <button
+      <button className="formulario"
         disabled={data.name === "" || data.phone === "" || data.email === ""}
         type="submit"
       >
