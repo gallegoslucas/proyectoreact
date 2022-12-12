@@ -1,21 +1,32 @@
+import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import { useContext, useState} from "react";
+import { cartContext } from "../../context/cartContext";
+import MyButton from "../MyButton/MyButton";
+import { Link } from "react-router-dom";
+import swal from 'sweetalert';
 
 function ItemDetail({ product }) {
+    const [isInCart, setIsInCart]=useState(false)
+    const {addToCart} = useContext(cartContext) 
+    
+
+    function onAddToCart(count) {
+        swal({
+            title: "Felicitaciones!",
+            text: `Agregaste ${count} items al carrito!`,
+            icon: "success",
+            button: "Continuar",
+        });
+
+        setIsInCart(count);
+        addToCart(product, count);
+
+    }
+
+    
     return (
-        // <div className="card-detail">
-        //     <div className="card-detail_img">
-        //         <img src={product.imgurl} alt="Product img" />
-        //     </div>
-        //     <div className="card-detail_detail">
-        //         <h2>{product.title}</h2>
-        //         <p>{product.description}</p>
-        //         <h4 >$ {product.price}</h4>
-        //     </div>
-        //     {/* <ItemCount stock={product.stock}/> */}
-        // </div>
-
-
-        
+       
         <div className="cartadetalle" >
         
             <div className="card " >
@@ -29,7 +40,16 @@ function ItemDetail({ product }) {
                     <p className="card-price">${product.price}</p>
                 </div>
                 <p className="card-text">{product.description}</p>
-                
+                </div>
+                <div>
+                    
+                    {isInCart ?
+                        <Link to="/Cart">
+                            <MyButton colorBtn="#8b863a">Ir al carrito</MyButton>
+                        </Link>
+                        :
+                    <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
+                    }
                 </div>
             </div>
         </div>

@@ -12,14 +12,14 @@ function Item({ description,title, imgurl, price, id, }) {
             <div className="card-img">
                 <img src={imgurl} alt={title} />
             </div>
-            <div className="detalles">
+            <div className="detalleslista">
                 <div className="tittle-price">
                 <h5 className="card-title">{title}</h5>
                     <p className="card-price">${price}</p>
                 </div>
                 <div className="botonlink">
                 <Link className="botonmas" to={urlDetail}>
-                    <MyButton >Ver más</MyButton>
+                    <MyButton colorBtn="#8b863a">Ver más</MyButton>
                 </Link>
             </div>
                 </div>

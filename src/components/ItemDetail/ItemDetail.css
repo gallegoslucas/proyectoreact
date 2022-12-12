@@ -17,6 +17,7 @@
 
 .card {
     color: black;
+    
     margin: 50px;
     width: 300px;
     cursor: pointer;
@@ -44,7 +45,7 @@
 
     font-family: 'Playfair Display',
         serif;
-    height: 210px;
+    
     display: grid;
     grid-template-rows: auto 1fr 50px;
 

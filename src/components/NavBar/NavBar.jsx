@@ -32,7 +32,9 @@ function Navbar() {
                         <Link to="/category/Bebidas">Bebidas</Link>
                     </span>
                     <span>
-                        <Link to="/"> <CartWidget /></Link>
+                        <Link to="/Cart">
+                            <CartWidget />
+                        </Link>
                     </span>
                     
                 </div>
